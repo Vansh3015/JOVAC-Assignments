@@ -1,0 +1,42 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  padding: 40px;
+  color: #333;
+}
+
+.container {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 500px;
+  margin: auto;
+}
+
+.knowMoreBtn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  display: inline-block;
+  background-color: #555;
+  border-radius: 5px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+div.knowMoreBtn:hover {
+  background-color: darkorange;
+}
+
+a:link {
+  color: white;
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+}
+
+a:active {
+  color: black;
+}

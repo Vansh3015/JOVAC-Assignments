@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grade Using If-Else</title>
+</head>
+<body>
+    <script>
+        let marks = prompt("Please enter your marks out of 100:");
+        marks = Number(marks);
+
+        if (isNaN(marks) || marks < 0 || marks > 100) {
+            console.log("Invalid input — Marks should be between 0 and 100.");
+        } else {
+            let grade;
+
+            if (marks >= 90) {
+                grade = "A";
+                console.log("Excellent! You did amazing!");
+            } else if (marks >= 75) {
+                grade = "B";
+                console.log("Great job! Keep it up!");
+            } else if (marks >= 60) {
+                grade = "C";
+                console.log("Good effort. You're doing well.");
+            } else if (marks >= 40) {
+                grade = "D";
+                console.log("You passed. There's room to improve.");
+            } else {
+                grade = "F";
+                console.log("Better luck next time. Don’t give up.");
+            }
+
+            console.log("You entered marks:", marks);
+            console.log("Your grade is:", grade);
+        }
+    </script>
+</body>
+</html>
