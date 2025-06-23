@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Library System</title>
+</head>
+<body>
+    <script>
+        // Array of book objects
+        let library = [
+            { title: "Book A", author: "Author 1", year: 2000, available: true },
+            { title: "Book B", author: "Author 2", year: 2005, available: true },
+            { title: "Book C", author: "Author 3", year: 2010, available: false }
+        ];
+
+        // Function to display available books
+        function displayAvailableBooks() {
+            console.log("Available Books:");
+            for (let book of library) {
+                if (book.available) {
+                    console.log(`"${book.title}" by ${book.author} (${book.year})`);
+                }
+            }
+        }
+
+        // Function to mark a book as borrowed
+        function borrowBook(title) {
+            let book = library.find(b => b.title === title);
+            if (book) {
+                if (book.available) {
+                    book.available = false;
+                    console.log(`You borrowed "${title}".`);
+                } else {
+                    console.log(`"${title}" is already borrowed.`);
+                }
+            } else {
+                console.log(`Book titled "${title}" not found.`);
+            }
+        }
+
+        // Function to add a new book
+        function addBook(title, author, year) {
+            library.push({ title, author, year, available: true });
+            console.log(`Book "${title}" added to the library.`);
+        }
+
+        // Demo
+        displayAvailableBooks();
+        borrowBook("Book A");
+        addBook("Book D", "Author 4", 2022);
+        displayAvailableBooks();
+    </script>
+</body>
+</html>

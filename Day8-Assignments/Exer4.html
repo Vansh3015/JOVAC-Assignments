@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Practice Programs</title>
+</head>
+<body>
+        
+    <h2>Input Validation</h2>
+
+    <script>
+        
+        let userInput;
+        do {
+            userInput = prompt("Enter a number between 1 and 10:");
+            userInput = Number(userInput);
+        } while (isNaN(userInput) || userInput < 1 || userInput > 10);
+        console.log("You entered a valid number:", userInput);
+
+      
+    </script>
+</body>
+</html>

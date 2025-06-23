@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Practice Programs</title>
+</head>
+<body>
+    <h2>Frequency Counter</h2>
+
+    <script>
+       
+
+        
+        let sampleArray = [1, 2, 2, 3, 3, 3, 4, 1, 2];
+        let frequency = {};
+        for (let num of sampleArray) {
+            if (frequency[num]) {
+                frequency[num]++;
+            } else {
+                frequency[num] = 1;
+            }
+        }
+        console.log("Frequency of each number:", frequency);
+
+      
+    </script>
+</body>
+</html>

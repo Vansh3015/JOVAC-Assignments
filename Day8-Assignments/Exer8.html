@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Record System</title>
+</head>
+<body>
+    <script>
+        // Student object
+        let student = {
+            name: "John Doe",
+            age: 18,
+            grade: "B",
+            subjects: ["Math", "English"]
+        };
+
+        // Function to add a new subject
+        function addSubject(subject) {
+            student.subjects.push(subject);
+            console.log(`Subject "${subject}" added.`);
+        }
+
+        // Function to update grade
+        function updateGrade(newGrade) {
+            student.grade = newGrade;
+            console.log(`Grade updated to ${newGrade}.`);
+        }
+
+        // Function to display student info
+        function displayStudent() {
+            console.log("Student Information:");
+            console.log("Name:", student.name);
+            console.log("Age:", student.age);
+            console.log("Grade:", student.grade);
+            console.log("Subjects:", student.subjects.join(", "));
+        }
+
+        // Demo
+        displayStudent();
+        addSubject("Science");
+        updateGrade("A");
+        displayStudent();
+    </script>
+</body>
+</html>
