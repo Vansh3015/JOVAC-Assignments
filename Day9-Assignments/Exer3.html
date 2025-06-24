@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Recursive Countdown</title>
+</head>
+<body>
+  <h2>Recursive Countdown Timer</h2>
+  <button onclick="countdown(5)">Start Countdown from 5</button>
+
+  <p id="display"></p>
+
+  <script>
+    function countdown(n) {
+      if (n > 0) {
+        document.getElementById("display").innerText = n;
+        setTimeout(function() {
+          countdown(n - 1);
+        }, 1000);
+      } else {
+        document.getElementById("display").innerText = "Blast Off!";
+      }
+    }
+  </script>
+</body>
+</html>
