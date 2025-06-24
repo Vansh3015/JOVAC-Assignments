@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Basic Calculator with Callback</title>
+</head>
+<body>
+  <h2>Basic Calculator</h2>
+
+  <label>First Number: </label>
+  <input type="number" id="num1">
+  <br><br>
+
+  <label>Second Number: </label>
+  <input type="number" id="num2">
+  <br><br>
+
+  <button onclick="doCalculation(add)">Add</button>
+  <button onclick="doCalculation(subtract)">Subtract</button>
+  <button onclick="doCalculation(multiply)">Multiply</button>
+  <button onclick="doCalculation(divide)">Divide</button>
+
+  <p id="result"></p>
+
+  <script>
+    
+    function calculate(a, b, operation) {
+      return operation(a, b);
+    }
+
+    // Different operations as functions (callbacks)
+    function add(x, y) {
+      return x + y;
+    }
+
+    function subtract(x, y) {
+      return x - y;
+    }
+
+    function multiply(x, y) {
+      return x * y;
+    }
+
+    function divide(x, y) {
+      if (y === 0) return "Cannot divide by zero";
+      return x / y;
+    }
+
+    function doCalculation(operationFunc) {
+      const a = parseFloat(document.getElementById("num1").value);
+      const b = parseFloat(document.getElementById("num2").value);
+
+      if (isNaN(a) || isNaN(b)) {
+        alert("Please enter valid numbers.");
+        return;
+      }
+
+      const result = calculate(a, b, operationFunc);
+      document.getElementById("result").innerText = "Result: " + result;
+    }
+  </script>
+</body>
+</html>
