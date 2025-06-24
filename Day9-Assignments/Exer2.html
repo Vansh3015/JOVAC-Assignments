@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tax Calculator</title>
+</head>
+<body>
+  <h2>Simple Tax Calculator</h2>
+
+  <label>Amount: </label>
+  <input type="number" id="amount" placeholder="Enter amount">
+  <br><br>
+
+  <label>Tax Percentage (%): </label>
+  <input type="number" id="tax" placeholder="Enter tax %">
+  <br><br>
+
+  <button onclick="calculateTax()">Calculate Total</button>
+
+  <p id="result"></p>
+
+  <script>
+    function calculateTax() {
+      const amount = parseFloat(document.getElementById("amount").value);
+      const tax = parseFloat(document.getElementById("tax").value);
+
+      if (isNaN(amount) || isNaN(tax)) {
+        alert("Please enter valid numbers!");
+        return;
+      }
+
+      const total = amount + (amount * tax / 100);
+      document.getElementById("result").innerText = 
+        "Total after " + tax + "% tax: ₹" + total.toFixed(2);
+    }
+  </script>
+</body>
+</html>
