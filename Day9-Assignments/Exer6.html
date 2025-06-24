@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Book Search Simulator</title>
+</head>
+<body>
+  <h2>Book Search Simulator</h2>
+
+  <label>Enter Book Name: </label>
+  <input type="text" id="bookInput">
+  <br><br>
+
+  <button onclick="startSearch()">Search Book</button>
+
+  <p id="result"></p>
+
+  <script>
+   
+    function searchBook(bookName, callback) {
+      document.getElementById("result").innerText = "Searching for \"" + bookName + "\"...";
+      
+      
+      setTimeout(function() {
+        
+        const found = "Result: \"" + bookName + "\" found in library!";
+        callback(found);
+      }, 2000);
+    }
+
+   
+    function startSearch() {
+      const name = document.getElementById("bookInput").value;
+      if (!name) {
+        alert("Please enter a book name.");
+        return;
+      }
+
+      
+      searchBook(name, function(resultMessage) {
+        document.getElementById("result").innerText = resultMessage;
+      });
+    }
+  </script>
+</body>
+</html>
