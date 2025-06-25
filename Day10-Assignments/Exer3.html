@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Leaderboard</title>
+</head>
+<body>
+
+  <h2>Leaderboard</h2>
+  <ol id="leaderboard">
+    <!-- Rankings will be inserted here -->
+  </ol>
+
+  <script>
+    const names = ["Grace", "Arpit", "Lokendra", "Satyam"];
+    const leaderboard = document.getElementById("leaderboard");
+
+    names.forEach(name => {
+      const li = document.createElement("li");
+      li.textContent = name;
+      leaderboard.appendChild(li);
+    });
+  </script>
+
+</body>
+</html>

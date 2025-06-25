@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Update Paragraphs</title>
+</head>
+<body>
+
+  <div id="features">
+    <p>Fast performance</p>
+    <p>User-friendly interface</p>
+    <p>Secure and reliable</p>
+  </div>
+
+  <button onclick="updateFeatures()">Add ✓ Prefix</button>
+
+  <script>
+    function updateFeatures() {
+      const featureDiv = document.getElementById("features");
+      const paragraphs = featureDiv.getElementsByTagName("p");
+
+      for (let i = 0; i < paragraphs.length; i++) {
+        paragraphs[i].textContent = "✓ " + paragraphs[i].textContent;
+      }
+    }
+  </script>
+
+</body>
+</html>

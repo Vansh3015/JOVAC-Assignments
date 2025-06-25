@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Remove Second List Item</title>
+</head>
+<body>
+
+  <ul id="myList">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+  </ul>
+
+  <button onclick="removeSecondItem()">Remove Second Item</button>
+
+  <script>
+    function removeSecondItem() {
+      const ul = document.getElementById("myList");
+      const secondLi = ul.getElementsByTagName("li")[1];
+      if (secondLi) {
+        ul.removeChild(secondLi);
+      }
+    }
+  </script>
+
+</body>
+</html>
